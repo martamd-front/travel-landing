@@ -1,14 +1,24 @@
+:root {
+  --primary-color: #007089;
+  --secondary-color: #e4f4f8;
+  --box-shadow: 0 1px 2px rgb(0 0 0 / 7%), 0 2px 6px 2px rgb(0 0 0 / 3%);
+  --bg-color: linear-gradient(
+    174.2deg,
+    rgba(255, 244, 228, 1) 7.1%,
+    rgba(240, 246, 238, 1) 67.4%
+  );
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  background: #272044;
-
+  background: var(--bg-color);
   margin: 0;
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -74,7 +84,7 @@ body {
   letter-spacing: 3px;
   text-transform: uppercase;
   padding: 16px;
-  background-color: #462cb3;
+  background-color: var(--primary-color);
   text-decoration: none;
 }
 
@@ -89,13 +99,14 @@ section.secondary {
 }
 
 header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../images/hero-ny.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/hero-ny.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
   text-align: center;
   padding: 200px 0;
+  box-shadow: var(--box-shadow);
 }
 
 header h1 {
@@ -125,7 +136,7 @@ header a {
   font-size: 14px;
   line-height: 1.5;
   text-align: center;
-  color: #272044;
+  color: var(--primary-color);
   padding: 16px 32px;
   margin-top: 32px;
   display: inline-block;
@@ -137,6 +148,9 @@ header a {
 
 main {
   background-color: white;
+  max-width: 1500px;
+  margin: 0 auto;
+  box-shadow: var(--box-shadow);
 }
 
 main h2 {
@@ -145,7 +159,6 @@ main h2 {
   line-height: 1.5;
   margin: 0;
   letter-spacing: 5px;
-  color: #272044;
   opacity: 0.3;
   text-transform: uppercase;
 }
@@ -154,7 +167,6 @@ main h3 {
   font-weight: 700;
   font-size: 40px;
   line-height: 1.5;
-  color: #272044;
   margin: 0;
 }
 
@@ -185,7 +197,14 @@ main p {
 
 footer {
   color: white;
-  background: linear-gradient(rgba(39, 32, 68, 0.9), rgba(39, 32, 68, 0.9));
+  background: linear-gradient(
+    174.2deg,
+    rgb(0, 112, 137) 7.1%,
+    rgb(2, 79, 96) 67.4%
+  );
+  max-width: 1500px;
+  margin: 0 auto;
+  box-shadow: var(--box-shadow);
 }
 
 footer h3 {
@@ -231,6 +250,10 @@ footer a {
 
   header h3 {
     font-size: 12px;
+  }
+
+  main h3 {
+    line-height: 50px;
   }
 
   .grid {
